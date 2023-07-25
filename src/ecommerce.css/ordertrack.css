@@ -1,0 +1,427 @@
+
+
+:root{
+
+--body:#8c9eff;
+/* --body:gold; */
+--cont:#eceff1;
+--line:#651fff;
+--txt:#007bfd;
+--light:#c5cae9;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* new !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* @font-face {
+  font-family: pop;
+  src: url(./Fonts/Poppins-Medium.tt);
+} */
+/* ====================================== */
+body{
+  /* border: 2px solid blue; */
+  width: 100%;
+  min-height: 100vh;
+  /* background-color: var(--body); */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  line-height: 1.4;
+}
+
+/* ====================================================== */
+/* first way */
+/* ====================================================== */
+
+.main{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* ///////////////////// */
+  font-family: pop; 
+   /*/////////////////////  */
+}
+
+.head{
+  text-align: center;
+  font-weight: 600;
+  color: #333;
+}
+
+.head-1{
+  font-size: 33px;
+}
+
+.head-1 span{
+  color: #ff4732;
+}
+
+.head-2 {
+  font-style: 18px;
+  margin-top: 3px;
+}
+
+.main ul{
+  display: flex;
+  margin-top: 70px;
+}
+
+.main ul li{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  text-align: center;
+}
+
+.main ul li img{
+  /* border: 2px solid blue; */
+  width: 40px;
+  height: 40px;
+    margin: 0 55px;
+}
+
+.main ul li span{
+  position: absolute;
+  color: white ; 
+  border-radius: 50%;
+   display: none;
+}
+
+.main ul li .text{
+  font-size: 16px;
+  font-weight: 600;
+  color: #ff4732;
+  cursor: pointer;
+}
+
+.main ul li .progress{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #444444a5;
+  /* new */
+  /* for centred elements */
+  display: grid;
+  place-items: center;
+/* =================================================================== */
+  margin: 25px 0;
+  color: white;
+position: relative;
+cursor: pointer;
+}
+
+.main ul li .progress::after{
+content: "";
+position: absolute;
+width: 120px;
+height: 5px;
+background-color: #444444a5;
+right: 30px;
+}
+
+.main ul li .one::after{
+width: 0;
+height: 0;
+}
+
+.main ul li .progress p{
+  font-size: 13px;
+  user-select: none;
+}
+
+/* active css */
+.main ul li .active,.main ul li .active::after{
+  background-color: var(--primary-color);
+}
+
+.main ul li .active p{
+  display: none;
+}
+
+.main ul li .active span {
+    display: flex;
+}
+
+/* ====================================================== */
+
+/* responsive css */
+
+@media (max-width:770px) {
+  .main  ul li .progress{
+    margin:0 30px;
+  }
+  .head{
+    margin-top: 70px;
+  }
+ .main  ul{
+    flex-direction: column;
+    /* margin-right: 30px; */
+  }
+ .main  ul li{
+    flex-direction: row;
+  }
+.main ul li .progress::after{
+  width: 5px;
+  height: 50px;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.main ul li .one::after{
+  width: 0;
+  height: 0;
+} 
+.main ul li img{
+    margin:20px 0;
+}
+  }
+
+@media (max-width:600px) {
+  .head .head-1{
+    font-size: 26px;
+  }
+  /* .head .head-2{
+    font-size: 16px;
+  } */
+}
+
+
+
+
+/* ================================================================= */
+/* second way */
+/* ================================================================= */
+
+
+.containertrack{
+  /* border: 2px solid red; */
+  width: 1100px;
+  max-width: 100%;
+  padding: 40px;
+  /* margin: 0 30px; */
+  margin:60px auto;
+  background: var(--cont);
+  position: relative;
+  border-radius: 10px;
+}
+
+.details{
+  display: flex;
+  gap: 1em;
+  /* flex-wrap: wrap; */
+  justify-content:space-between;
+}
+
+.order h1{
+  text-transform: uppercase;
+}
+
+.order span{
+  color: var(--txt);
+}
+
+.date p{
+  font-size: 1.1rem;
+}
+
+.track{
+  width: 90%;
+  margin: 4em auto 8em;
+}
+
+#progress{
+  /* border: 2px solid blue; */
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 1em;
+  position: relative;
+  text-align: center;
+  /* margin-left: 40px; */
+
+}
+
+#progress li{
+  /* border: 2px solid red; */
+  width: 31%;
+  position: relative;
+height: 10px;
+  background: var(--light);
+  left: 0;
+}
+#progress li.one2{
+  width: 0;
+}
+
+/* active css */
+#progress li.active,#progress li.active::before{
+  background-color: var(--primary-color);
+}
+
+#progress li::before{
+  /* border: 2px solid blue; */
+  content: '\2713';
+  position: absolute;
+  top: -20px;
+  right: -30px;
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  align-items: center;
+  font-size: 2rem;
+  height: 50px;
+  background-color: var(--light);
+  border-radius: 50%;
+  color: #fff;
+  z-index: 1111;
+  font-weight: bold;
+}
+
+.lists{
+  width: 110%;
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+  margin-left: -40px;
+  text-align: center;
+}
+
+.list{
+  /* border: 2px solid blue; */
+  display: flex;
+  gap: 1em;
+  flex: 1 1 50px;
+  place-content: center;
+}
+
+.list p{
+  font-size: 1.1em;
+}
+
+.list img{
+  width: 50px;
+}
+
+@media (max-width:850px) {
+  .details{
+    margin: 30px 0;
+  }
+  .mobilecase{
+    /* border: 2px solid blue; */
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 40vh;
+  }
+  #progress{
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    bottom: 45px;
+  }
+  .lists{
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+  }
+  .mobilecase{
+    position: relative;
+    margin: 50px auto;
+  }
+  .mobilecase #progress li{
+    /* border: 7px solid blue; */
+    width: 10px;
+    height: 70px;
+  }
+  .mobilecase #progress li.one2{
+    /* border: 2px solid red; */
+  width: 0;
+    left: -7px;
+  }
+  .mobilecase #progress li::before{
+    /* border: 2px solid blue; */
+    width: 35px;
+    height: 35px;
+    left: -10px;
+    top: 65px;
+  }
+
+
+}
+
+@media (max-width:500px) {
+  .mobilecase{
+    width: 70%;
+  }
+.details{
+  flex-direction: column;
+  margin-bottom: 30px;
+  text-align: center;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #progress li:last-child::before{
+  content: '\2713';
+} */
+
+/* #progress::before{
+  content:'';
+  position: absolute;
+  top: 20px;
+  width: 55%;
+  margin-left:35px;
+  margin-left:30px;
+  height: 10px;
+  background: var(--line);
+  background: var(--primary-color);
+  background-color: var(--light);
+  z-index: 111;
+}
+
+#progress::after{
+  content:'';
+  position: absolute;
+  top: 20px;
+  width: 80%;
+  height: 10px;
+  background: var(--line);
+  background: #c5cae9;
+} */
