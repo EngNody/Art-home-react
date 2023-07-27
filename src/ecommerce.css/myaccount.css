@@ -1,0 +1,504 @@
+.account-page * {
+  padding: 0;
+  margin: 0;
+  /* font-family: Roboto; */
+  /* font-size: 14px; */
+  /* font-weight: normal; */
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+main{
+  width: 80%;
+  box-shadow: 0 0 10px rgb(66, 65, 65);
+  margin:50px auto;
+  padding: 10px 40px;
+}
+
+main .account-page{
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: space-between;
+}
+
+main .account-page .profil{
+  /* border: 2px solid blue; */
+  width: 30%;
+}
+main .account-page .profil .profil-detail{
+  width: 140px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  text-align: center;
+  overflow: none;
+}
+main .account-page .profil .profil-detail h2{
+color: black;
+margin-top: 10px;
+margin-bottom: 5px;
+font-size: 26px;
+}
+main .account-page .profil .profil-detail p{
+  width: 250px;
+  transform: translateX(-20%);
+}
+main .account-page .profil .profil-detail img{
+width: 100%;
+height: 100%;
+border: 2px solid #eee;
+border-radius: 50%;
+box-shadow: 0  0 8px #888;
+/* object-fit: cover; */
+}
+main .account-page .profil ul{
+  padding: 10px;
+  margin-top: 130px;
+}
+main .account-page .profil ul li{
+  margin-bottom: 5px;
+}
+main .account-page .profil ul li a{
+color: black;
+text-decoration: none;
+text-transform: uppercase;
+border: 2px solid rgba(236,240,241,0.3);
+text-align: left;
+padding: 5px 8px;
+display: block;
+}
+main .account-page .profil ul li a span{
+float: right;
+}
+
+
+.active , main .account-page .profil ul li a:hover{
+  color: white !important;
+  background-color: var(--primary-color);
+
+}
+
+main .account-page .account-detail{
+  /* border: 2px solid blue; */
+  width: 60%;
+}
+
+main .account-page .account-detail input[type="submit"]{
+  background-color: var(--primary-color);
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  padding: 8px;
+  margin: 80px auto 0;
+  display: block;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.5;
+  font-size: 24px;
+  width: 50%;
+  border-radius: 10px;
+  transition: all 1s;
+}
+
+main .account-page .account-detail input[type="submit"]:hover{
+  opacity: 1;
+  font-size: 27px;
+  padding: 10px;
+}
+
+/* myorders page */
+
+main .account-page .account-detail table{
+	border: 1px solid #eee;
+}
+
+main .account-page .account-detail table th,
+main .account-page .account-detail table td{
+	padding: 8px;
+	text-align: center;
+	border: 1px solid #eee;
+}
+
+/* password page */
+.account-detail h2{
+  margin-bottom: 70px !important;
+}
+main form.checkout-form .form-group input, main form.checkout-form .form-group select, main form.checkout-form .form-group textarea {
+  width: 100%;
+  padding: 8px 5px;
+}
+/* main form.checkout-form .form-inline {
+  display: flex;
+  justify-content: space-between;
+} */
+/* main form.checkout-form .form-inline .form-group {
+  width: 48%;
+} */
+main form.checkout-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 17px;
+}
+main form.checkout-form .form-group input, main form.checkout-form .form-group select, main form.checkout-form .form-group textarea {
+  width: 100%;
+  padding: 8px 5px;
+}
+main form.checkout-form .form-group {
+  margin: 40px 5px;
+  width: calc(100% - 10px);
+}
+/* =============================================== */
+/* my order
+
+main .account-page .account-detail table{
+	border: 1px solid #eee;
+	width: 100%;
+}
+
+main .account-page .account-detail table th, main .account-page .account-detail table td {
+  padding: 8px;
+  text-align: center;
+  border: 5px solid #eee;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive */
+@media screen and (max-width:1100px) {
+  main{
+    width: 95%;
+  }
+  main  .account-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .account-page .profil {
+    width: 80%;
+}
+main .account-page .account-detail {
+  width: 100% !important;
+  text-align: center;
+}
+.account-detail h2 {
+    margin-bottom: 70px !important;
+    margin-top: 70px;
+}
+main .account-page .account-detail table {
+  margin: auto;
+}
+main form.checkout-form .form-group input, main form.checkout-form .form-group select, main form.checkout-form .form-group textarea {
+  width: 70%;
+}
+main form.checkout-form .pass {
+  margin: auto;
+  text-align: start;
+  width: 70%;
+}
+}
+/* my check out page */
+
+/* Product Page ===== Single Product Styling */
+main .breadcrumb{
+	background-color: var(--primary-color);
+  color: white !important;
+	padding: 10px 0;
+	margin-bottom: 25px;
+}
+main .breadcrumb ul{
+	display: flex;
+	justify-content: flex-start;
+	list-style: none;
+}
+main .breadcrumb ul li{
+	padding: 0 10px;
+}
+.paypash li:not(:last-child)::after{
+  margin:0 0 0 20px;
+}
+main .breadcrumb ul li a{
+	text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+main .breadcrumb ul li a:hover{
+
+  color: var(--secondary-dark-color);
+}
+/* pay check out page */
+
+ .paycheck main{
+box-shadow: none;
+} 
+.paycheck .breadcrumb {
+  font-size: var(--font-small);
+  margin: 0 0 50px 0;
+}
+.paycheck .billing-detail{
+flex: 50%;
+padding-right: 10%;
+font-weight: 700 !important;
+}
+.paycheck .form-inline.thename ,.checkout-page{
+  display: flex;
+  flex-direction: row;
+}
+.paycheck .checkout-form{
+  padding-left: 20px;
+}
+.paycheck .checkout-form h4{
+  background-color: var(--primary-color) !important;
+  color: white;
+margin: 50px 0;
+padding: 20px;
+color: white !important;
+} 
+
+
+
+
+/* Content main === Checkout Page === Checkout Items */
+main .checkout-page .billing-detail{
+	width: 60%;
+}
+main .checkout-page .billing-detail h4{
+	display: block;
+	color: var(--darkStaleGray);
+	background-color: var(--khaki);
+	text-transform: uppercase;
+	padding: 5px;
+	margin-bottom: 10px;
+  margin-bottom: 40px;
+}
+main form.checkout-form .form-group{
+	margin: 10px 5px;
+	width: calc(100% - 10px);
+}
+.paycheck form.checkout-form label{
+	color: var(--darkStaleGray);
+	display: block;
+	margin-bottom: 6px;
+  font-weight: 400;
+}
+main form.checkout-form .form-group input,
+main form.checkout-form .form-group select,
+main form.checkout-form .form-group textarea{
+	width: 100%;
+	padding: 8px 5px
+}
+main form.checkout-form input:focus,
+main form.checkout-form select:focus,
+main form.checkout-form textarea:focus{
+	outline: 1px solid var(--darkStaleGray);
+}
+main form.checkout-form .form-inline{
+	display: flex;
+	justify-content: space-between;
+}
+main form.checkout-form .form-inline .form-group{
+	width: 48%;
+}
+/* Content Section === Checkout Page === Order Summary */
+main .order-summary{
+	width: 30%;
+	height: 500px;
+	padding: 5px;
+	border: 1px solid rgba(236, 240, 241,0.3);
+}
+main .order-summary .checkout-total span{
+	float: right;
+}
+main .order-summary .checkout-total textarea{
+	width: 100%;
+	resize: none;
+	display: none;
+	font-size: 12px;
+	padding: 5px;
+}
+main .order-summary .checkout-total h3{
+	background-color: var(--secondary-dark-color);
+	color: white;
+	text-transform: uppercase;
+	padding: 10px;
+  margin: 50px 0;
+
+}
+main .order-summary .checkout-total ul{
+	list-style: none;
+	padding: 10px;
+}
+main .order-summary .checkout-total ul li{
+	margin-bottom: 10px;
+}
+main .order-summary .checkout-total ul li input[type="radio"]{
+	width: 15px;
+	height: 15px;
+	position: relative;
+	appearance: none;
+	outline: none;
+	margin-right: 5px;
+}
+main .order-summary .checkout-total ul li input[type="radio"]:after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 2px;
+	border: 1px solid var(--khaki);
+	border-radius: 50%;
+	padding: 2px;
+	box-sizing: border-box;
+	background-clip: content-box;
+}
+main .order-summary .checkout-total ul li input:checked[type="radio"]:after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 2px;
+	background: var(--darkStaleGray);
+	border-radius: 50%;
+	padding: 2px;
+	box-sizing: border-box;
+	background-clip: content-box;
+}
+.paycheck .order-summary .checkout-total ul li input[type="submit"]{
+	background-color: var(--primary-color);
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	padding: 7px 8px;
+	margin-top: 20px;
+	display: block;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+  font-size: 17px;
+  font-weight: 500;
+}
+main .order-summary .checkout-total ul li input[type="submit"]:hover{
+	background-color: var(--secondary-dark-color);
+	color: white;
+}
+
+/* Account Page === Profile */
+main .account-page{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+main .account-page .profile{
+	width: 30%;
+}
+main .account-page .profile .profile-img{
+	width: 140px;
+	height: 160px;
+	margin: 0 auto;
+	margin-bottom: 60px;
+	overflow: none;
+	text-align: center;
+}
+main .account-page .profile .profile-img img{
+	width: 100%;
+	height: 140px;
+	border-radius: 50%;
+	border: 1px solid rgba(236, 240, 241,0.3);
+	object-fit: cover;
+	box-shadow: 0px 0px 8px #9e9e9e;
+}
+main .account-page .profile .profile-img h2{
+	color: var(--darkStaleGray);
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+main .account-page .profile ul{
+	list-style: none;
+	padding: 10px;
+}
+main .account-page .profile ul li{
+	margin-bottom: 5px;
+}
+main .account-page .profile ul li a{
+	color: var(--darkStaleGray);
+	border: 1px solid rgba(236, 240, 241,0.3);
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: left;
+	padding: 5px 8px;
+	display: block;
+}
+main .account-page .profile ul li a:hover{
+	background-color: var(--darkStaleGray);
+	color: var(--khaki);
+}
+main .account-page .profile ul li a span{
+	float: right;
+}
+/* Account Page === Detail */
+main .account-page .account-detail{
+	width: 60%;
+}
+main .account-page .account-detail input[type="submit"], .paycheck input#update{
+	background-color: var(--primary-color);
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	padding: 5px 8px;
+	margin-top: 50px;
+	display: block;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+  font-weight: bold;
+  opacity: 0.5;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+main .account-page .account-detail input[type="submit"]:hover ,.paycheck input#update:hover{
+	background-color: var(--primary-color);
+  padding: 10px 8px;
+opacity: 1 !important;
+}
+.paycheck #update{
+font-size: 25px;
+padding: 20px;
+margin: 50px 0;
+}
+main .account-page .account-detail table{
+	border: 1px solid #eee;
+	width: 100%;
+}
+
+main .account-page .account-detail table th,
+main .account-page .account-detail table td{
+	padding: 8px;
+	text-align: center;
+	border: 1px solid #eee;
+  font-weight: 400;
+}
+
+main .account-page .account-detail table td a{
+color: blue;
+}
+main .account-page .account-detail table td a:hover{
+  color: var(--primary-color);
+  }
+
+
