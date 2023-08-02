@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link , NavLink } from "react-router-dom";
+// add active class to active elementsrelated with other
+// import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -8,8 +11,8 @@ const Header = () => {
         <aside className="site-off desktop-hide">
           <div className="off-canvas">
             <div className="canvas-head flexitem">
-              <div className="logo"><a href="E-commerce2.html"><span className="circle" />EGY Store</a></div>
-              <a href className="t-close flexcenter">            <span style={{fontSize: '20px'}}>✖</span></a>
+              <div className="logo"><Link to="/"><span className="circle" />EGY Store</Link></div>
+              <Link to='#' className="t-close flexcenter">            <span style={{fontSize: '20px'}}>✖</span></Link>
             </div>
             <div className="departments" />
             <nav />
@@ -23,38 +26,38 @@ const Header = () => {
               <div className="wrapper flexitem responsive1">
                 <div className="left">
                   <ul className="flexitem main-links">
-                    <li><a href="#" className="li1">Blog</a></li>
-                    <li><a href="#" className="li1">Featured products</a></li>
-                    <li><a href="../ecommerce.html/wishlistpage.html" className="li1">Wishlist</a></li>
+                    <li><Link to="/blog" className="li1">Blog</Link></li>
+                    <li><Link to="#" className="li1">Featured products</Link></li>
+                    <li><Link to="/wishlistpage" className="li1">Wishlist</Link></li>
                   </ul>
                 </div>
                 <div className="right">
                   <ul className="flexitem main-links responsive1">
-                    <li><a href="sign up.html" className="li1 login">Login</a></li>
-                    <li><a href="myaccount.html" className="li1">My Account</a></li>
-                    <li><a href="ordertrack.html" className="li1">Order Tracking</a></li>
-                    <li><a href="#" className="li1">USD<span className="icon-small">
+                    <li><Link to="/signup" className="li1 login">Login</Link></li>
+                    <li><Link to="/myaccount" className="li1">My Account</Link></li>
+                    <li><Link to="/ordertrack" className="li1">Order Tracking</Link></li>
+                    <li><Link to="#" className="li1">USD<span className="icon-small">
                           {/* <i class="ri-arrow-down-s-line"></i> */}
-                        </span></a>
+                        </span></Link>
                       <ul className="ourshowul">
-                        <li className="current"><a href="#">USD</a></li>
-                        <li><a href="#">EURO</a></li>
-                        <li><a href="#">GBP</a></li>
-                        <li><a href="#">IDR</a></li>
+                        <li className="current"><Link to="#">USD</Link></li>
+                        <li><Link to="#">EURO</Link></li>
+                        <li><Link to="#">GBP</Link></li>
+                        <li><Link to="#">IDR</Link></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" className="li1">English <span className="icon-small">
+                      <Link to="#" className="li1">English <span className="icon-small">
                           <i className="ri-arrow-down-s-line" /></span>
-                      </a>
+                      </Link>
                       <ul className="ourshowul">
-                        <li className="current"><a href="#">English</a></li>
-                        <li><a href="#">German</a></li>
-                        <li><a href="#">Spanish</a></li>
-                        <li><a href="#">Bahasa</a></li>
+                        <li className="current"><Link to="#">English</Link></li>
+                        <li><Link to="#">German</Link></li>
+                        <li><Link to="#">Spanish</Link></li>
+                        <li><Link to="#">Bahasa</Link></li>
                       </ul>
                     </li>
-                    {/* <li><a href="sign up.html" class="li1 login" id="signin">Login</a></li> */}
+                    {/* <li><Link to="sign up.html" class="li1 login" id="signin">Login</Link></li> */}
                   </ul>
                 </div>
               </div>
@@ -64,38 +67,39 @@ const Header = () => {
           <div className="header-nav">
             <div className="container">
               <div className="wrapper flexitem">
-                <a href="#" className="trigger desktop-hide">
+                <Link to="#" className="trigger desktop-hide">
                   {/* <span>&#9776;</span> */}
                   <span className="line" />
                   <span className="line" />
                   <span className="line" />
-                </a>
+                </Link>
                 <div className="left flexitem">
-                  <div className="logo"><a href="E-commerce2.html"><span className="circle" />EGY Store</a></div>
+                  <div className="logo"><Link to="/"><span className="circle" />EGY Store</Link></div>
                   <nav className="mobile-hide">
                     <ul className="flexitem second-links">
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">Shop</a></li>
-                      <li className="has-child"><a href="#">Women
-                          <span className="icon-small"><i className="ri-arrow-down-s-line" /></span></a>  
-                        {/* .mega>.countainer>.wrapper>.flexcol*4>.row>h4*ul>li*5>a */}
+                    {/* when fix paths that will fix class active */}
+                      <li><NavLink to="/">Home</NavLink></li>
+                      <li><NavLink to="/blog">Shop</NavLink></li>
+                      <li className="has-child"><NavLink to="#">Women
+                          <span className="icon-small"><i className="ri-arrow-down-s-line" /></span></NavLink>  
+                        {/* .mega>.countainer>.wrapper>.flexcol*4>.row>h4*ul>li*5>Link */}
                         <div className="mega">
                           {/* <div class="countainer"> */}
                           <div className="wrapper">
                             <div className="flexcol">
                               <div className="row">
-                                <h4>Women's clothing</h4>
+                                <h4>Women's clothing/</h4>
                                 <ul>
-                                  <li><a href="#">Dresses</a></li>
-                                  <li><a href="#" />Tops &amp; Tees</li>
-                                  <li><a href="#" />Jackets &amp; Coats</li>
-                                  <li><a href="#">Pants &amp; Capris</a></li>
-                                  <li><a href="#">Sweaters</a></li>
-                                  <li><a href="#">Costumes</a></li>
-                                  <li><a href="#">Hoodies &amp; Sweatshirts</a></li>
-                                  <li><a href="#">Pajamas &amp; Robes</a></li>
-                                  <li><a href="#">Shorts</a></li>
-                                  <li><a href="#">Swimwear</a></li>
+                                  <li><Link to="#">Dresses</Link></li>
+                                  <li><Link to="#">Tops &amp; Tees</Link></li>
+                                  <li><Link to="#">Jackets &amp; Coats</Link></li>
+                                  <li><Link to="#">Pants &amp; Capris</Link></li>
+                                  <li><Link to="#">Sweaters</Link></li>
+                                  <li><Link to="#">Costumes</Link></li>
+                                  <li><Link to="#">Hoodies &amp; Sweatshirts</Link></li>
+                                  <li><Link to="#">Pajamas &amp; Robes</Link></li>
+                                  <li><Link to="#">Shorts</Link></li>
+                                  <li><Link to="#">Swimwear</Link></li>
                                 </ul>
                               </div>
                             </div>
@@ -103,13 +107,13 @@ const Header = () => {
                               <div className="row">
                                 <h4>Jewelry</h4>
                                 <ul>
-                                  <li><a href="#">Accessories</a></li>
-                                  <li><a href="#">Bags &amp; Purses</a></li>
-                                  <li><a href="#">Necklaces</a></li>
-                                  <li><a href="#">Rings</a></li>
-                                  <li><a href="#">Earrings</a></li>
-                                  <li><a href="#">Bracelets</a></li>
-                                  <li><a href="#">Body Jewelry</a></li>
+                                  <li><Link to="#">Accessories</Link></li>
+                                  <li><Link to="#">Bags &amp; Purses</Link></li>
+                                  <li><Link to="#">Necklaces</Link></li>
+                                  <li><Link to="#">Rings</Link></li>
+                                  <li><Link to="#">Earrings</Link></li>
+                                  <li><Link to="#">Bracelets</Link></li>
+                                  <li><Link to="#">Body Jewelry</Link></li>
                                 </ul>
                               </div>
                             </div>
@@ -117,15 +121,15 @@ const Header = () => {
                               <div className="row">
                                 <h4>Beauty</h4>
                                 <ul>
-                                  <li><a href="#">Bath accessories</a></li>
-                                  <li><a href="#">Makeup &amp; Cosmetics</a></li>
-                                  <li><a href="#">Skin Care</a></li>
-                                  <li><a href="#">Hair Care</a></li>
-                                  <li><a href="#">Essential Oils</a></li>
-                                  <li><a href="#">Fragrances</a></li>
-                                  <li><a href="#">Soaps &amp; Bath Bombs</a></li>
-                                  <li><a href="#">Face Masks &amp; Coverings</a></li>
-                                  <li><a href="#">Spa Kites &amp; Gifts</a></li>
+                                  <li><Link to="#">Bath accessories</Link></li>
+                                  <li><Link to="#">Makeup &amp; Cosmetics</Link></li>
+                                  <li><Link to="#">Skin Care</Link></li>
+                                  <li><Link to="#">Hair Care</Link></li>
+                                  <li><Link to="#">Essential Oils</Link></li>
+                                  <li><Link to="#">Fragrances</Link></li>
+                                  <li><Link to="#">Soaps &amp; Bath Bombs</Link></li>
+                                  <li><Link to="#">Face Masks &amp; Coverings</Link></li>
+                                  <li><Link to="#">SpLink Kites &amp; Gifts</Link></li>
                                 </ul>
                               </div>
                             </div>
@@ -133,34 +137,34 @@ const Header = () => {
                               <div className="row">
                                 <h4>Top Brands</h4>
                                 <ul className="women-brands">
-                                  <li><a href="#">Nike</a></li>
-                                  <li><a href="#">Louis Vuitton</a></li>
-                                  <li><a href="#">Hermes</a></li>
-                                  <li><a href="#">Gucci</a></li>
-                                  <li><a href="#">Zalando</a></li>
-                                  <li><a href="#">Tiffany &amp; Co.</a></li>
-                                  <li><a href="#">Zara</a></li>
-                                  <li><a href="#">H&amp;M</a></li>
-                                  <li><a href="#">Cartier</a></li>
-                                  <li><a href="#">Chanel</a></li>
-                                  <li><a href="#">Hurley</a></li>
+                                  <li><Link to="#">Nike</Link></li>
+                                  <li><Link to="#">Louis Vuitton</Link></li>
+                                  <li><Link to="#">Hermes</Link></li>
+                                  <li><Link to="#">Gucci</Link></li>
+                                  <li><Link to="#">Zalando</Link></li>
+                                  <li><Link to="#">Tiffany &amp; Co.</Link></li>
+                                  <li><Link to="#">Zara</Link></li>
+                                  <li><Link to="#">H&amp;M</Link></li>
+                                  <li><Link to="#">Cartier</Link></li>
+                                  <li><Link to="#">Chanel</Link></li>
+                                  <li><Link to="#">Hurley</Link></li>
                                 </ul>
-                                <a href className="view-all">
+                                <Link to className="view-all">
                                   View all brands <i className="ri-arrow-right-line" />
-                                </a>
+                                </Link>
                               </div>
                             </div>
                             <div className="flexcol products">
                               <div className="row">
                                 <div className="media"> 
                                   <div className="thumbnail object-cover">
-                                    <a href>
-                                      <img src="images/new.png" alt="" /></a></div><a href>  
-                                  </a>
+                                    <Link to>
+                                      <img src="images/new.png" alt="" /></Link></div><Link to>  
+                                  </Link>
                                 </div>
                                 <div className="text-content">
                                   <h4>Most Wanted!</h4>
-                                  <a href className="primary-button">Order Now</a>
+                                  <Link to className="primary-button">Order Now</Link>
                                 </div>
                               </div>
                             </div>
@@ -168,18 +172,18 @@ const Header = () => {
                           {/* </div> */}
                         </div>
                       </li>
-                      <li><a href="#">Men </a></li>
-                      <li><a href="#" className="ourrelative">Sports<div className="fly-item"><span>New!</span></div></a></li>
+                      <li><NavLink to="#">Men </NavLink></li>
+                      <li><NavLink to="#" className="ourrelative">Sports<div className="fly-item"><span>New!</span></div></NavLink></li>
                     </ul>
                   </nav>
                 </div>
                 <div className="right">
                   <ul className="flexitem second-links">
-                    <li className="mobile-hide hovericonheart"><a href="#"> 
+                    <li className="mobile-hide hovericonheart"><Link to="#"> 
                         {/* <div class="icon-large"><i class="ri-heart-line checkheart"></i></div>  */}
                         <div className="icon-large"><span>🧡</span></div> 
                         <div className="fly-item"><span className="item-number-heart">0</span></div>
-                      </a>
+                      </Link>
                       <div className="minicartheart">
                         <div className="cart-head">
                           <div><span className="item-number-heart">0</span> items in cart</div>
@@ -189,7 +193,7 @@ const Header = () => {
                         </ul>
                       </div>
                     </li>
-                    <li className="iscart"><a href="#">
+                    <li className="iscart"><Link to="#">
                         <div className="icon-large"  id="carty">
                           {/* <i class="ri-shopping-cart-line"></i> */}
                           <span className="icon-cart" />
@@ -199,7 +203,7 @@ const Header = () => {
                           <div className="mini-text">Total</div>
                           <div className="cart-tatol thetotal">$0.00</div>
                         </div>
-                      </a>
+                      </Link>
                       <div className="mini-cart">
                         <div className="content">
                           <div className="cart-head">
@@ -209,10 +213,10 @@ const Header = () => {
                             <ul className="products mini">
                               {/* <li class="item">
               <div class="thumbnail object-cover">
-                <a href=""><img src="images/dec4.jpg" alt=""></a>
+                <Link to=""><img src="images/dec4.jpg" alt=""></Link>
               </div>
               <div class="item-content">
-                <p><a href="">Dimmable Ceiling Light Modern</a></p>
+                <p><Link to="">Dimmable Ceiling Light Modern</Link></p>
                 <span class="price">
                 <div>
                     <span class="current">$279.99</span>
@@ -220,15 +224,15 @@ const Header = () => {
                 </div>
                 </span>
               </div>
-              <span href="" class="item-remove closeminicart">
+              <span to="" class="item-remove closeminicart">
                             <span style='font-size:20px;'>&#10006;</span></span>
             </li> */}
                               {/* <li class="item">
               <div class="thumbnail object-cover">
-                <a href=""><img src="images/dec5.jpg" alt=""></a>
+                <Link to=""><img src="images/dec5.jpg" alt=""></Link>
               </div>
               <div class="item-content">
-                <p><a href="">Dimmable Ceiling Light Modern</a></p>
+                <p><Link to="">Dimmable Ceiling Light Modern</Link></p>
                 <span class="price">
               <div>
                     <span class="current">$279.99</span>
@@ -237,15 +241,15 @@ const Header = () => {
               <button class="newbutton">Buy</button>
                 </span>
               </div>
-              <a href="" class="item-remove"><i class="ri-close-line closeminicart"></i></a>
+              <Link to="" class="item-remove"><i class="ri-close-line closeminicart"></i></Link>
             </li> */}
                               {/* 
             <li class="item">
               <div class="thumbnail object-cover">
-                <a href=""><img src="images/dec2.jpg" alt=""></a>
+                <Link to=""><img src="images/dec2.jpg" alt=""></Link>
               </div>
               <div class="item-content">
-                <p><a href="">Dimmable Ceiling Light Modern</a></p>
+                <p><Link to="">Dimmable Ceiling Light Modern</Link></p>
                 <span class="price">
               <div>
                     <span class="current">$279.99</span>
@@ -254,14 +258,14 @@ const Header = () => {
               <button class="newbutton">Buy</button>
                 </span>
               </div>
-              <a href="" class="item-remove"><i class="ri-close-line closeminicart"></i></a>
+              <Link to="" class="item-remove"><i class="ri-close-line closeminicart"></i></Link>
             </li> */}
                               {/* <li class="item">
               <div class="thumbnail object-cover">
-                <a href=""><img src="images/dec3.jpg" alt=""></a>
+                <Link to=""><img src="images/dec3.jpg" alt=""></Link>
               </div>
               <div class="item-content">
-                <p><a href="">Dimmable Ceiling Light Modern</a></p>
+                <p><Link to="">Dimmable Ceiling Light Modern</Link></p>
                 <span class="price">
               <div>
                     <span class="current">$279.99</span>
@@ -270,7 +274,7 @@ const Header = () => {
               <button class="newbutton">Buy</button>
                 </span>
               </div>
-              <a href="" class="item-remove"><i class="ri-close-line closeminicart"></i></a>
+              <Link to="" class="item-remove"><i class="ri-close-line closeminicart"></i></Link>
             </li> */}
                             </ul>
                           </div>
@@ -280,19 +284,19 @@ const Header = () => {
                               <p><strong className="thetotal">$0.00</strong></p>
                             </div>
                             <div className="actions">
-                              <a href="/chechout.html" className="primary-button">Checkout</a>
-                              <a href="/cart.html" className="secondary-button">View Cart</a>
+                              <Link to="/paycheckout" className="primary-button">Checkout</Link>
+                              <Link to="/cart" className="secondary-button">View Cart</Link>
                             </div>
                           </div>
                         </div>
                       </div>
                     </li>
-                    {/* <li><a href="#" class="iscart">
+                    {/* <li><Link to="#" class="iscart">
         <div class="icon-large">
           <i class="ri-shopping-cart-line"></i>
            <div class="fly-item"><span class="item-number">0</span></div>
           </div>
-        </a></li> */}
+        </Link></li> */}
                     {/* <div class="icon-text">
     <div class="mini-text">Total</div>
     <div class="cart-total">$0.00</div>
@@ -313,144 +317,144 @@ const Header = () => {
                       <div className="dpt-head">
                         <div className="main-text">All Departments</div>
                         <div className="minitext mobile-hide">Total 1059 Products</div>
-                        <a href className="dpt-trigger mobile-hide">
+                        <Link to className="dpt-trigger mobile-hide">
                           <span style={{fontSize: '30px'}} className="ri-xl newmenu">☰</span>
                           <span style={{fontSize: '20px'}} className="ri-xl newclose">✖</span>
-                        </a>
+                        </Link>
                       </div>
                       <div className="dpt-menu">
                         <ul className="second-links">
                           <li className="has-child beauty">
-                            <a href="#">
+                            <Link to="#">
                               <div className="icon-large"><i className="ri-bear-smile-line" /></div>
                               Beuty
                               <div className="icon-small"><i className="ri-arrow-right-s-line" /></div>
-                            </a>
+                            </Link>
                             <ul>
-                              <li><a href="#">Makeup</a></li>
-                              <li><a href="#">Skin Care</a></li>
-                              <li><a href="#">Hair Care</a></li>
-                              <li><a href="#">Fragrance</a></li>
-                              <li><a href="#">Foot &amp; Hand Care</a></li>
-                              <li><a href="#">Tools &amp; Accessories</a></li>
-                              <li><a href="#">Shave &amp; Hair Removal</a></li>
-                              <li><a href="#">Personal Care</a></li>
+                              <li><Link to="#">Makeup</Link></li>
+                              <li><Link to="#">Skin Care</Link></li>
+                              <li><Link to="#">Hair Care</Link></li>
+                              <li><Link to="#">Fragrance</Link></li>
+                              <li><Link to="#">Foot &amp; Hand Care</Link></li>
+                              <li><Link to="#">Tools &amp; Accessories</Link></li>
+                              <li><Link to="#">Shave &amp; Hair Removal</Link></li>
+                              <li><Link to="#">Personal Care</Link></li>
                             </ul>
                           </li>
                           <li className="has-child Electronic">
-                            <a href="#">
+                            <Link to="#">
                               <div className="icon-large"><i className="ri-bluetooth-connect-line" /></div>
                               Electronic
                               <div className="icon-small"><i className="ri-arrow-right-s-line" /></div>
-                            </a>
+                            </Link>
                             <ul>
-                              <li><a href="#">Camera</a></li>
-                              <li><a href="#">Cell Phones</a></li>
-                              <li><a href="#">Computers</a></li>
-                              <li><a href="#">Gps &amp; Navigation</a></li>
-                              <li><a href="#">Home Audio</a></li>
-                              <li><a href="#">Television</a></li>
-                              <li><a href="#">Video Projects</a></li>
-                              <li><a href="#">Wearable Technology</a></li>
+                              <li><Link to="#">Camera</Link></li>
+                              <li><Link to="#">Cell Phones</Link></li>
+                              <li><Link to="#">Computers</Link></li>
+                              <li><Link to="#">Gps &amp; Navigation</Link></li>
+                              <li><Link to="#">Home Audio</Link></li>
+                              <li><Link to="#">Television</Link></li>
+                              <li><Link to="#">Video Projects</Link></li>
+                              <li><Link to="#">Wearable Technology</Link></li>
                             </ul>
                           </li>
                           <li className="has-child fashion">
-                            <a href="#">
+                            <Link to="#">
                               <div className="icon-large"><i className="ri-t-shirt-air-line" /></div>
                               women's fashion
                               <div className="icon-small"><i className="ri-arrow-right-s-line" /></div>
-                            </a>
+                            </Link>
                             <ul>
-                              <li><a href="#">Clothing</a></li>
-                              <li><a href="#">Shoes</a></li>
-                              <li><a href="#">Jewerly</a></li>
-                              <li><a href="#">Watches</a></li>
-                              <li><a href="#">Handbags</a></li>
-                              <li><a href="#">Accessories</a></li>
-                              <li><a href="#" /></li>
-                              <li><a href="#" /></li>
+                              <li><Link to="#">Clothing</Link></li>
+                              <li><Link to="#">Shoes</Link></li>
+                              <li><Link to="#">Jewerly</Link></li>
+                              <li><Link to="#">Watches</Link></li>
+                              <li><Link to="#">Handbags</Link></li>
+                              <li><Link to="#">Accessories</Link></li>
+                              <li><Link to="#" /></li>
+                              <li><Link to="#" /></li>
                             </ul></li>
-                          <li><a href="#">
+                          <li><Link to="#">
                               <div className="icon-large"><i className="ri-shirt-line" /></div>
                               Men's fashion
-                            </a></li>
-                          <li><a href="#">
+                            </Link></li>
+                          <li><Link to="#">
                               <div className="icon-large"><i className="ri-user-5-line" /></div>
                               Girls's fashion
-                            </a></li>
-                          <li><a href="#">
+                            </Link></li>
+                          <li><Link to="#">
                               <div className="icon-large">
                                 {/* <span class="icon-user"></span> */}
                               </div>
                               Boy's fashion
-                            </a></li>
-                          <li><a href="#">
+                            </Link></li>
+                          <li><Link to="#">
                               <div className="icon-large"><i className="ri-heart-pulse-line" /></div>
                               Health &amp; Household
-                            </a></li>
+                            </Link></li>
                           {/* ============================================================= */}
                           {/*                the correct                                    */}
                           {/* ============================================================= */}
                           <li className="has-child homekit">
-                            <a href="#">
+                            <Link to="#">
                               <div className="icon-large"><i className="ri-t-shirt-air-line" /></div>
                               Home &amp; Kitchen
                               <div className="icon-small"><i className="ri-arrow-right-s-line" /></div>
-                            </a>
+                            </Link>
                             <div className="mega">
                               <div className=" flexcol">
                                 <div className="row">
-                                  <h4><a href="#">Kitchen &amp; Dining</a></h4>
+                                  <h4><Link to="#">Kitchen &amp; Dining</Link></h4>
                                   <ul>
-                                    <li><a href="#">Kitchen</a></li>
-                                    <li><a href="#">Dining Room</a></li>
-                                    <li><a href="#">Pantry</a></li>
-                                    <li><a href="#">Great Room</a></li>
-                                    <li><a href="#">BreakFast Nook</a></li>
+                                    <li><Link to="#">Kitchen</Link></li>
+                                    <li><Link to="#">Dining Room</Link></li>
+                                    <li><Link to="#">Pantry</Link></li>
+                                    <li><Link to="#">Great Room</Link></li>
+                                    <li><Link to="#">BreakFast Nook</Link></li>
                                   </ul>
                                 </div>
                                 <div className="row">
-                                  <h4><a href>Living</a></h4>
+                                  <h4><Link to>Living</Link></h4>
                                   <ul>
-                                    <li><a href="#">Living Room</a></li>
-                                    <li><a href="#">Family room</a></li>
-                                    <li><a href="#">Sunroom</a></li>
-                                  </ul>
-                                </div>
-                              </div>
-                              <div className="flexcol">
-                                <div className="row">
-                                  <h4><a href="#">Bad &amp; Both</a></h4>
-                                  <ul>
-                                    <li><a href="#">Bathroom</a></li>
-                                    <li><a href="#">Powder Room</a></li>
-                                    <li><a href="#">Badroom</a></li>
-                                    <li><a href="#">Storage &amp; Closet</a></li>
-                                    <li><a href="#">Baby &amp; Kids</a></li>
-                                  </ul>
-                                </div>
-                                <div className="row">
-                                  <h4><a href="#">Utility</a></h4>
-                                  <ul>
-                                    <li><a href="#">Laundry</a></li>
-                                    <li><a href="#">Garage</a></li>
-                                    <li><a href="#">Mudroom</a></li>
+                                    <li><Link to="#">Living Room</Link></li>
+                                    <li><Link to="#">Family room</Link></li>
+                                    <li><Link to="#">Sunroom</Link></li>
                                   </ul>
                                 </div>
                               </div>
                               <div className="flexcol">
                                 <div className="row">
-                                  <h4><a href="#">Outdoor</a></h4>
+                                  <h4><Link to="#">Bad &amp; Both</Link></h4>
                                   <ul>
-                                    <li><a href="#">Landscape</a></li>
-                                    <li><a href="#">Patio</a></li>
-                                    <li><a href="#">Deck</a></li>
-                                    <li><a href="#">Backyard</a></li>
-                                    <li><a href="#">Porch</a></li>
-                                    <li><a href="#">Exterior</a></li>
-                                    <li><a href="#">Outdoor Kitchen</a></li>
-                                    <li><a href="#">Front Yard</a></li>
-                                    <li><a href="#">Poolhouse</a></li>
+                                    <li><Link to="#">Bathroom</Link></li>
+                                    <li><Link to="#">Powder Room</Link></li>
+                                    <li><Link to="#">Badroom</Link></li>
+                                    <li><Link to="#">Storage &amp; Closet</Link></li>
+                                    <li><Link to="#">Baby &amp; Kids</Link></li>
+                                  </ul>
+                                </div>
+                                <div className="row">
+                                  <h4><Link to="#">Utility</Link></h4>
+                                  <ul>
+                                    <li><Link to="#">Laundry</Link></li>
+                                    <li><Link to="#">Garage</Link></li>
+                                    <li><Link to="#">Mudroom</Link></li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div className="flexcol">
+                                <div className="row">
+                                  <h4><Link to="#">Outdoor</Link></h4>
+                                  <ul>
+                                    <li><Link to="#">Landscape</Link></li>
+                                    <li><Link to="#">Patio</Link></li>
+                                    <li><Link to="#">Deck</Link></li>
+                                    <li><Link to="#">Backyard</Link></li>
+                                    <li><Link to="#">Porch</Link></li>
+                                    <li><Link to="#">Exterior</Link></li>
+                                    <li><Link to="#">Outdoor Kitchen</Link></li>
+                                    <li><Link to="#">Front Yard</Link></li>
+                                    <li><Link to="#">Poolhouse</Link></li>
                                   </ul>
                                 </div>
                               </div>
@@ -460,20 +464,20 @@ const Header = () => {
                           {/* end the correct      */}
                           {/* ================================================================ */}
                           <li>
-                            <a href="#">
+                            <Link to="#">
                               <div className="icon-large"><i className="ri-android-line" /></div>
                               Pet Supplies
-                            </a></li>
+                            </Link></li>
                           <li>
-                            <a href="#">
+                            <Link to="#">
                               <div className="icon-large"><i className="ri-basketball-line" /></div>
                               Sports
-                            </a></li>
+                            </Link></li>
                           <li>
-                            <a href="#">
+                            <Link to="#">
                               <div className="icon-large"><i className="ri-shield-star-line" /></div>
                               Best Seller
-                            </a></li>
+                            </Link></li>
                         </ul>
                       </div>
                     </div>

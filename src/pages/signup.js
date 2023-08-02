@@ -1,20 +1,20 @@
 import React from 'react';
-// import './signup.css';
+import './signup.css';
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   return (
-    <>
 
-          <div>
+          <div id='samaka'>
             <header>
               {/* <h2 class="logo">EGY Store</h2> */}
-              <a href="#" className="logo">EGY Store</a>
+              <Link to="/" className="logo">EGY Store</Link>
               <nav className="navegation">
-                <a href="./myaccount.html">My Account</a>
-                <a href="aboutpage.html">About</a>
-                <a href="#">Services</a>
-                <a href="contactuspage.html">Contact</a>
-                <button href="#" className="btnlogin-popup" id="login">Login</button>
+                <Link to="/myaccount">My Account</Link>
+                <Link to="/aboutpage">About</Link>
+                <Link to="#">Services</Link>
+                <Link to="/contactuspage">Contact</Link>
+                <button to="#" className="btnlogin-popup" id="login">Login</button>
               </nav>
             </header>
             <div className="wrapper">
@@ -40,11 +40,11 @@ const Signup = () => {
                   </div>
                   <div className="remember-forget">
                     <label htmlFor><input type="checkbox" />Remember Me</label>
-                    <a href="#">Forget Password?</a>
+                    <Link to="#">Forget Password?</Link>
                   </div>
                   <button type="submit" className="btn">Login</button>
                   <div className="login-register">
-                    <p>Don`t have an account?<a href="#" className="register-link">Register</a></p>
+                    <p>Don`t have an account?<Link to="#" className="register-link">Register</Link></p>
                   </div>
                 </form>
               </div>
@@ -74,19 +74,18 @@ const Signup = () => {
                   </div>
                   <div className="remember-forget">
                     <label htmlFor><input type="checkbox" />I agree to the terms $ conditions</label>
-                    {/* <a href="#">Forget Password?</a> */}
+                    {/* <Link to="#">Forget Password?</Link> */}
                   </div>
                   <button type="submit" className="btn">Register</button>
                   <div className="login-register">
                     <p>Already have an account?
-                      <a href="#" className="login-link">Login</a></p>
+                      <Link to="#" className="login-link">Login</Link></p>
                   </div>
                 </form>
               </div>
             </div>
-          </div>
+</div>
   
-    </>
   );
 }
 
