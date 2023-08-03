@@ -1,9 +1,14 @@
 import React from 'react';
 import './signup.css';
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
 
 const Signup = () => {
   return (
+<>
+<Helmet>
+<title>Sign Up</title>
+</Helmet>
 
           <div id='samaka'>
             <header>
@@ -85,7 +90,7 @@ const Signup = () => {
               </div>
             </div>
 </div>
-  
+  </>
   );
 }
 

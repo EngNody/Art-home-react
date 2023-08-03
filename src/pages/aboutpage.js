@@ -3,13 +3,16 @@ import './aboutpage.css'
 import Header from '../comp/header'
 import Footer from '../comp/footer'
 import Menubottom from '../comp/menubottom'
+import { Helmet } from 'react-helmet-async';
 
 
 
 const Aboutpage = () => {
   return (
-      
-  
+      <>
+      <Helmet>
+    <title>About Page</title>
+    </Helmet>
       
             <div id="page" className="site single-page paycheck">
               <Header />
@@ -45,7 +48,7 @@ const Aboutpage = () => {
               <Footer />
               
             </div>
-
+</>
   );
 }
 

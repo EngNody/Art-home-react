@@ -9,6 +9,7 @@ function App() {
 <>
 
 <Header />
+
       <div id="page" className="site page-home">
       
         <main>

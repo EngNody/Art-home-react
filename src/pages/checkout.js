@@ -2,10 +2,16 @@ import React from 'react';
 import Header from '../comp/header'
 import Footer from '../comp/footer'
 import Menubottom from '../comp/menubottom'
+import { Helmet } from 'react-helmet-async';
 
 const Checkout = () => {
   return (
-    
+    <>
+    <Helmet>
+    <title>Check out</title>
+    </Helmet>
+
+
           <div id="page" className="site page-category">
           <Header />
 
@@ -248,7 +254,7 @@ const Checkout = () => {
               </a>
             </div>
           </div>
-    
+    </>
   );
 }
 

@@ -3,9 +3,15 @@ import Header from '../comp/header'
 import Footer from '../comp/footer'
 import Menubottom from '../comp/menubottom'
 import Featuredproducts from '../comp/featuredproducts';
+import { Helmet } from 'react-helmet-async';
 
 const Pagecategory = () => {
   return (
+    <>
+    <Helmet>
+    <title>Category</title>
+    </Helmet>
+
     <body id='body'>
     
           <div id="page" className="site page-category">
@@ -523,6 +529,7 @@ const Pagecategory = () => {
           </div>
     
     </body>
+    </>
   );
 }
 

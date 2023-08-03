@@ -3,10 +3,17 @@ import Header from '../comp/header'
 import Footer from '../comp/footer'
 import Menubottom from '../comp/menubottom'
 import Featuredproducts from '../comp/featuredproducts';
+import { Helmet } from 'react-helmet-async';
 
 
 const Pageoffer = () => {
   return (
+<>
+<Helmet>
+<title>Offers</title>
+</Helmet>
+
+
     <body id='body'>
     
           <div id="page" className="site single-page">
@@ -709,6 +716,7 @@ const Pageoffer = () => {
           </div>
       
     </body>
+    </>
   );
 }
 

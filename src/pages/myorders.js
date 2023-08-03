@@ -3,11 +3,16 @@ import './myaccount.css';
 import Header from '../comp/header'
 import Footer from '../comp/footer'
 import Menubottom from '../comp/menubottom'
+import { Helmet } from 'react-helmet-async';
 
 
 const Myorders = () => {
   return (
-    
+    <>
+    <Helmet>
+    <title>My Order</title>
+    </Helmet>
+
           <div id="page" className="site single-page">
           <Header />
 
@@ -91,7 +96,7 @@ const Myorders = () => {
             <Footer />
             
           </div>
-
+</>
   );
 }
 

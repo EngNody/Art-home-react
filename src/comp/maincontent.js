@@ -1,8 +1,8 @@
-import React from 'react';
+// import React from 'react';
 
-const Maincontent = ({appcontent}) => {
-  return <main>{appcontent}</main>
+// const Maincontent = ({appcontent}) => {
+//   return <main>{appcontent}</main>
   
-}
+// }
 
-export default Maincontent;
+// export default Maincontent;

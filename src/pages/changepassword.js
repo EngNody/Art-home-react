@@ -2,11 +2,17 @@ import React from 'react';
 import Header from '../comp/header'
 import Footer from '../comp/footer'
 import Menubottom from '../comp/menubottom'
+import { Helmet } from 'react-helmet-async';
 
 
 const Changepassword = () => {
   return (
-    
+    <>
+    <Helmet>
+    <title>Change Password</title>
+    </Helmet>
+
+
           <div id="page" className="site single-page">
           <Header />
 
@@ -72,7 +78,7 @@ const Changepassword = () => {
             <Footer />
             
           </div>
-  
+  </>
   );
 }
 

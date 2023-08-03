@@ -2,12 +2,16 @@ import React from 'react';
 import Header from '../comp/header'
 import Footer from '../comp/footer'
 import Menubottom from '../comp/menubottom'
+import { Helmet } from 'react-helmet-async';
 
 
 const Paycheckout = () => {
   return (
-    // <body id='body'>
-    
+    <>
+    <Helmet>
+    <title>Chech Out</title>
+    </Helmet>
+
           <div id="page" className="site single-page paycheck">
   
             <Header />
@@ -122,8 +126,8 @@ const Paycheckout = () => {
             <Footer />
           </div>
     
-    // </body>
-  );
+      </>
+          );
 }
 
 export default Paycheckout;

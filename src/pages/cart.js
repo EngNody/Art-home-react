@@ -2,11 +2,17 @@ import React from 'react';
 import Header from '../comp/header'
 import Footer from '../comp/footer'
 import Menubottom from '../comp/menubottom'
+import { Helmet } from 'react-helmet-async';
 
 
 const Cart = () => {
   return (
-      
+    <>
+    <Helmet>
+    <title>Cart</title>
+    </Helmet>
+
+
             <div id="page" className="site page-category">
             <Header />
 
@@ -1173,7 +1179,7 @@ const Cart = () => {
               
             </div>
       
-  
+  </>
   );
 }
 

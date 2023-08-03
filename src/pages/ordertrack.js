@@ -3,9 +3,15 @@ import './ordertrack.css'
 import Header from '../comp/header'
 import Footer from '../comp/footer'
 import Menubottom from '../comp/menubottom'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Ordertrack = () => {
   return (
+    <>
+    <Helmet>
+    <title>Order Track</title>
+    </Helmet>
+
     <div id="page" class="site single-page paycheck orrder">
 
     <Header />
@@ -111,7 +117,7 @@ const Ordertrack = () => {
     <Footer />
 
   </div>
-
+  </>
   );
 }
 

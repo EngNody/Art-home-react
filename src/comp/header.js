@@ -122,11 +122,11 @@ const Header = () => {
                                 <h4>Beauty</h4>
                                 <ul>
                                   <li><Link to="#">Bath accessories</Link></li>
-                                  <li><Link to="#">Makeup &amp; Cosmetics</Link></li>
-                                  <li><Link to="#">Skin Care</Link></li>
-                                  <li><Link to="#">Hair Care</Link></li>
+                                  <li><Link to="/makeup">Makeup &amp; Cosmetics</Link></li>
+                                  <li><Link to="/skincare">Skin Care</Link></li>
+                                  <li><Link to="/haircare">Hair Care</Link></li>
                                   <li><Link to="#">Essential Oils</Link></li>
-                                  <li><Link to="#">Fragrances</Link></li>
+                                  <li><Link to="/fragrance">Fragrances</Link></li>
                                   <li><Link to="#">Soaps &amp; Bath Bombs</Link></li>
                                   <li><Link to="#">Face Masks &amp; Coverings</Link></li>
                                   <li><Link to="#">SpLink Kites &amp; Gifts</Link></li>
@@ -331,14 +331,14 @@ const Header = () => {
                               <div className="icon-small"><i className="ri-arrow-right-s-line" /></div>
                             </Link>
                             <ul>
-                              <li><Link to="#">Makeup</Link></li>
-                              <li><Link to="#">Skin Care</Link></li>
-                              <li><Link to="#">Hair Care</Link></li>
-                              <li><Link to="#">Fragrance</Link></li>
-                              <li><Link to="#">Foot &amp; Hand Care</Link></li>
-                              <li><Link to="#">Tools &amp; Accessories</Link></li>
-                              <li><Link to="#">Shave &amp; Hair Removal</Link></li>
-                              <li><Link to="#">Personal Care</Link></li>
+                              <li><Link to="/makeup">Makeup</Link></li>
+                              <li><Link to="/skincare">Skin Care</Link></li>
+                              <li><Link to="/haircare">Hair Care</Link></li>
+                              <li><Link to="/fragrance">Fragrance</Link></li>
+                              <li><Link to="/foothandcare">Foot &amp; Hand Care</Link></li>
+                              <li><Link to="/accessories">Tools &amp; Accessories</Link></li>
+                              <li><Link to="/shaving">Shave &amp; Hair Removal</Link></li>
+                              <li><Link to="/personalcare">Personal Care</Link></li>
                             </ul>
                           </li>
                           <li className="has-child Electronic">

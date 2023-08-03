@@ -1977,7 +1977,7 @@ margin-left: auto;
 }
 .banners .product-categories .row img{
 margin-right: 50px;
-width: 100%;
+height: 300px !important;
 
 }
 

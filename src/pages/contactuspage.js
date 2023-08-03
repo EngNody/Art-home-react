@@ -3,10 +3,15 @@ import './contactuspage.css';
 import Header from '../comp/header'
 import Footer from '../comp/footer'
 import Menubottom from '../comp/menubottom'
+import { Helmet } from 'react-helmet-async';
 
 const Contactuspage = () => {
   return (
-    
+    <>
+    <Helmet>
+    <title>Contact Us</title>
+    </Helmet>
+
           <div id="page" className="site single-page paycheck">
           <Header />
 
@@ -30,7 +35,7 @@ const Contactuspage = () => {
             <Footer />
             
           </div>
-  
+  </>
   );
 }
 
