@@ -82,7 +82,7 @@ function copymenu() {
     // eo.preventDefault();
     showsearch.classList.toggle("xxx");
   
-    if (favmob.classList.contains="showfavmob") {
+    if (favmob.classList.contains==="showfavmob") {
       favmob.classList.remove("showfavmob")
       wishlist.classList.remove("myheart")
   

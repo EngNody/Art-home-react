@@ -1,6 +1,4 @@
 
-
-
 .dpt-cat .dpt-head .ri-close-line {
   font-size: 27px;
 }
@@ -42,4 +40,14 @@ height: 100%;
 
 .maincontainer .bigcon .textcontent{
   margin: 30px 30px;
+  background-color: white;
+  }
+.maincontainer .sectionone{
+  margin-bottom: 50px;
+}
+
+  .maincontainer .sectionwhite{
+    background-color: white;
+    border-radius: 10px;
+
   }

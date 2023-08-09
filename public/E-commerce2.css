@@ -315,7 +315,7 @@ padding: 0.25em 1em;
 padding: 0.5em 0;
 margin-bottom: 1.8em;
 border-bottom: 1px solid var(--border-color);
-margin-top: 25px;
+padding-top: 25px;
 
 }
 .trigger{
@@ -425,7 +425,9 @@ width: fit-content;
   position:relative;
 margin-left: auto;
 margin-right: 17px;
-
+display: flex;
+align-items: center;
+justify-content: space-between;
 }
 
 
@@ -4162,10 +4164,342 @@ transition: var(--trans-background-color);
 
 
 
+/* ============================================================================================================= */
+ /* moon sun  */
 
+#sunmoon{ 
+  /* border: 2px solid blue; */
+  width: 100px;
+}
+
+#sunmoon .wrapper {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+
+#sunmoon #hide-checkbox {
+ opacity: 0;
+ height: 0;
+ width: 0;
+}
+
+#sunmoon .toggle {
+ position: relative;
+ cursor: pointer;
+ display: inline-block;
+ width: 80px;
+ height: 44px;
+ background: #211042;
+ border-radius: 50px;
+ transition: 500ms;
+ overflow: hidden;
+}
+
+#sunmoon .toggle-button {
+ position: absolute;
+ display: inline-block;
+ top: 7px;
+ left:7px;
+ width: 30px;
+ height: 30px;
+ border-radius: 50%;
+ background: #FAEAF1;
+ overflow: hidden;
+ box-shadow: 0 0 35px 4px rgba(255, 255, 255);
+ transition: all 500ms ease-out;
+}
+
+#sunmoon .crater {
+ position: absolute;
+ display: inline-block;
+ background: #FAEAF1;
+ border-radius: 50%;
+ transition: 500ms;
+}
+
+#sunmoon .crater-1 {
+  background: white;
+  width: 62px;
+  height: 58px;
+  left: -10px;
+  bottom: -20px;
+}
+
+#sunmoon .crater-2 {
+ width: 20px;
+ height: 20px;
+ top: -7px;
+ left: 44px;
+}
+
+#sunmoon .crater-3 {
+ width: 16px;
+ height: 16px;
+ top: 20px;
+ right: -4px;
+}
+
+#sunmoon .crater-4 {
+ width: 10px;
+ height: 10px;
+ top: 24px;
+ left: 30px;
+}
+
+#sunmoon .crater-5 {
+ width: 15px;
+ height: 15px;
+ top: 40px;
+ left: 48px;
+}
+
+#sunmoon .crater-6 {
+ width: 10px;
+ height: 10px;
+ top: 48px;
+ left: 20px;
+}
+
+#sunmoon .crater-7 {
+ width: 12px;
+ height: 12px;
+ bottom: 5px;
+ left: 35px;
+}
+
+#sunmoon .star {
+ position: absolute;
+ display: inline-block;
+ border-radius: 50%;
+ background: #FFF;
+ box-shadow: 1px 0 2px 2px rgba(255, 255, 255);
+}
+
+#sunmoon .star-1 {
+  width: 1px;
+  height: 1px;
+  right: 32px;
+  bottom: 37px;
+}
+
+#sunmoon .star-2 {
+ width: 8px;
+ height: 8px;
+ right: 70px;
+ top: 10px;
+}
+
+#sunmoon .star-3 {
+ width: 5px;
+ height: 5px;
+ right: 20px;
+ bottom: 15px;
+}
+
+#sunmoon .star-4 {
+ width: 3px;
+ height: 3px;
+ right: 40px;
+ bottom: 50px;
+}
+
+#sunmoon .star-5 {
+ width: 4px;
+ height: 4px;
+ right: 10px;
+ bottom: 35px;
+}
+
+#sunmoon .star-6,#sunmoon  .star-7,#sunmoon  .star-8 {
+ width: 10px;
+ height: 2px;
+ border-radius: 2px;
+ transform: rotate(-45deg);
+ box-shadow: 5px 0px 4px 1px #FFF;
+ animation-name: travel;
+ animation-duration: 1.5s;
+ animation-timing-function: ease-out;
+ animation-iteration-count: infinite;
+}
+
+#sunmoon .star-6 {
+ right: 30px;
+ bottom: 30px;
+ animation-delay: -2s;
+}
+
+#sunmoon .star-7 {
+ right: 50px;
+ bottom: -12px;
+}
+
+#sunmoon .star-8 {
+ right: 90px;
+ top: 47px;
+ animation-delay: -4s;
+}
+
+@keyframes travel {
+ 0% {
+   transform: rotate(-45deg) translateX(70px);
+ }
+
+ 50% {
+   transform: rotate(-45deg) translateX(-20px);
+   box-shadow: 5px 0px 6px 1px #FFF;
+ }
+
+ 100% {
+   transform: rotate(-45deg) translateX(-30px);
+   width: 2px;
+   height: 2px;
+   opacity: 0;
+   box-shadow: none;
+ }
+}
+
+#sunmoon #hide-checkbox:checked + .toggle {
+ background: #24D7F7;
+}
+
+#sunmoon #hide-checkbox:checked + .toggle .toggle-button {
+ background: #F7FFFF;
+ transform: translateX(40px);
+ box-shadow: 0 0 35px 5px rgba(255, 255, 255);
+}
+
+#sunmoon #hide-checkbox:checked + .toggle .toggle-button .crater {
+ transform: rotate(-45deg) translateX(70px);
+}
+
+#sunmoon #hide-checkbox:checked + .toggle .star {
+ animation: move 2s infinite;
+ transform: none;
+ box-shadow: none;
+}
+
+#sunmoon #hide-checkbox:checked + .toggle .star-1 {
+ width: 40px;
+ height: 10px;
+ border-radius: 10px;
+ background: #FFF;
+ left: 5px;
+ top: 30px;
+ box-shadow: none;
+}
+
+#sunmoon #hide-checkbox:checked + .toggle .star-2 {
+ width: 12px;
+ height: 12px;
+ background: #FFF;
+ left: 10px;
+ top: 23px;
+ box-shadow: -1px 0 2px 0 rgba(0, 0 , 0, 0.1);
+}
+
+#sunmoon #hide-checkbox:checked + .toggle .star-3 {
+ width: 16px;
+ height: 16px;
+ background: #FFF;
+ left: 20px;
+ top: 19px;
+ box-shadow: -1px 0 2px 0 rgba(0, 0 , 0, 0.1);
+}
+
+#sunmoon #hide-checkbox:checked + .toggle .star-4 {
+ width: 14px;
+ height: 14px;
+ background: #FFF;
+ left: 30px;
+ top: 21px;
+ box-shadow: -1px 0 2px 0 rgba(0, 0 , 0, 0.1);
+}
+
+#sunmoon #hide-checkbox:checked + .toggle .star-5 {
+  width: 60px;
+  height: 15px;
+  border-radius: 15px;
+  background: #FFF;
+  left: -27px;
+  bottom: 20px;
+  box-shadow: none;
+}
+
+#sunmoon #hide-checkbox:checked + .toggle .star-6 {
+  width: 23px;
+  height: 18px;
+  background: #FFF;
+  border-radius: 50%;
+  left: -5px;
+  bottom: 29px;
+  box-shadow: -1px 0 2px 0 rgba(0, 0 , 0, 0.1);
+}
+
+#sunmoon #hide-checkbox:checked + .toggle .star-7 {
+  width: 12px;
+  height: 18px;
+  background: #FFF;
+  border-radius: 50%;
+  left: 15px;
+  bottom: 25px;
+  box-shadow: -1px 0 2px 0 rgba(0, 0 , 0, 0.1);
+}
+
+#sunmoon #hide-checkbox:checked + .toggle .star-8 {
+ width: 21px;
+ height: 21px;
+ background: #FFF;
+ border-radius: 50%;
+ left: 70px;
+ top: 59px;
+ box-shadow: -1px 0 2px 0 rgba(0, 0 , 0, 0.1);
+}
+
+@keyframes move {
+ 0% {
+   transform: none;
+ }
  
+ 25% {
+   transform: translateX(2px);
+ }
+ 
+ 100% {
+   transform: translateX(-2px);
+ }
+}
+
+#sunmoon p {
+ text-align: center;
+ letter-spacing: 15px;
+ background: #34495e;
+ color: #FFF;
+}
+
+#sunmoon p.morning {
+ background: #e67e22;
+}
 
 
+/* ========================================================== */
+
+.darklight{
+  /* all: unset; */
+  font-weight: bold;
+  font-size: 17px;
+  background-color:rgba(0, 0, 0, 0.777);
+  color: white;
+  border-radius: 7px;
+  padding:5px 7px;
+  cursor: pointer;
+  /* height: 20px; */
+}
+
+.darklight:hover{
+  background-color: #000;
+}
 
 
 

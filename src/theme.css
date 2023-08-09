@@ -1,0 +1,38 @@
+
+
+.Light{
+  background-color: white;
+  color: black;
+}
+
+.Dark{
+background-color: rgb(58, 53, 53);
+/* color: white; */
+}
+
+
+.Dark .header-nav .trigger .line {
+  border: 2px solid #000;
+  background-color: #faf7f7;
+}
+
+.Dark header ,.item .main-links ,.row .content h4{
+  color: white;
+  /* background-color: black; */
+} 
+
+.Dark header .dpt-menu li a{
+color: black;
+}
+
+.Dark .sectop{
+  color: white;
+}
+
+.Dark .header-main{
+  background-color: white;
+}
+.Dark .header-main #search{
+  border: 2px solid var(--primary-color);
+
+}

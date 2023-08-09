@@ -20,7 +20,7 @@ const Aboutpage = () => {
 
               <main>
                 <div className="maincontainer">
-                  <div className="sectionone">
+                  <div className="sectionone sectionwhite">
                     <div className="bigcon">
                       <div className="imgframe">
                         <img src="images/lady17.jpeg" alt="" />
@@ -30,7 +30,7 @@ const Aboutpage = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="sectiontwo">
+                  <div className="sectiontwo sectionwhite">
                     <div className="bigcon">
                       <div className="textcontent">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio illum iusto expedita nam possimus fugiat sint laudantium tempore, dolorem facere laborum nemo? Rerum aliquam quisquam quam ut ad ratione illum.

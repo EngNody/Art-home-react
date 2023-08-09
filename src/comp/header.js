@@ -1,9 +1,14 @@
 import React from 'react';
 import { Link , NavLink } from "react-router-dom";
+import {useContext } from "react";
+import ThemeContext from "../context/themecontext";
+import '../theme.css'
 // add active class to active elementsrelated with other
 // import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const {theme , toggletheme} = useContext(ThemeContext);
+
   return (
     <div>
       <>
@@ -29,6 +34,30 @@ const Header = () => {
                     <li><Link to="/blog" className="li1">Blog</Link></li>
                     <li><Link to="#" className="li1">Featured products</Link></li>
                     <li><Link to="/wishlistpage" className="li1">Wishlist</Link></li>
+                    <div className="wrapper" id='sunmoon' onChange={() => {toggletheme(theme === "Light" ? "Dark" : "Light")}}>
+                    <input type="checkbox" id="hide-checkbox"/>
+                    {/* <input type="checkbox" id="hide-checkbox"  onClick={() => { changetheme(theme === "light"?"dark":"light")}}/>*/}
+                    <label for="hide-checkbox" className="toggle">
+                        <span className="toggle-button">
+                          <span className="crater crater-1"></span>
+                          <span className="crater crater-2"></span>
+                          <span className="crater crater-3"></span>   
+                          <span className="crater crater-4"></span>
+                          <span className="crater crater-5"></span>
+                          <span className="crater crater-6"></span>
+                          <span className="crater crater-7"></span>
+                        </span>
+                        <span className="star star-1"></span>
+                        <span className="star star-2"></span>
+                        <span className="star star-3"></span>
+                        <span className="star star-4"></span>
+                        <span className="star star-5"></span>
+                        <span className="star star-6"></span>
+                        <span className="star star-7"></span>
+                        <span className="star star-8"></span>
+                      </label>
+                    </div>
+                    <button className='darklight' onClick={() => {toggletheme(theme === "Light" ? "Dark" : "Light")}}>{theme}</button>
                   </ul>
                 </div>
                 <div className="right">
@@ -178,6 +207,7 @@ const Header = () => {
                   </nav>
                 </div>
                 <div className="right">
+                
                   <ul className="flexitem second-links">
                     <li className="mobile-hide hovericonheart"><Link to="#"> 
                         {/* <div class="icon-large"><i class="ri-heart-line checkheart"></i></div>  */}
@@ -276,7 +306,10 @@ const Header = () => {
               </div>
               <Link to="" class="item-remove"><i class="ri-close-line closeminicart"></i></Link>
             </li> */}
+
+            
                             </ul>
+                            
                           </div>
                           <div className="cart-footer">
                             <div className="subtotal">
@@ -303,6 +336,7 @@ const Header = () => {
     
         </div> */}
                   </ul>
+                  
                 </div>
               </div>
             </div>
